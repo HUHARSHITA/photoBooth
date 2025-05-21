@@ -1,0 +1,105 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    /* Pink Gradient Background */
+    background: linear-gradient(to bottom, #FFB6C1, #FF69B4); /* LightPink to HotPink */
+    margin: 0; /* Remove default body margin */
+    min-height: 100vh; /* Ensure the gradient covers the entire viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 600px; /* Adjust as needed */
+    margin: 20px auto; /* Add some top margin */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white container */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+h1 {
+    color: #E91E63; /* Hot Pink Header */
+    margin-bottom: 20px;
+}
+
+#camera-feed {
+    width: 400px;  /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    border: 3px solid #E91E63; /* Pink border */
+    border-radius: 5px;
+}
+
+/* Improved Button Styling */
+button {
+    background-color: #E91E63; /* Pink background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #C2185B; /* Darker pink on hover */
+}
+
+#photo-strip {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#photo-strip img {
+    width: 120px; /* Adjust as needed */
+    height: 160px; /* Adjust as needed */
+    border: 3px solid #211ee9; /* Pink border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+#countdown-timer {
+  font-size: 5em;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it's above the video */
+}
+
+/* "Fancy" Photo Strip Styling */
+#photo-strip {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#photo-strip img {
+    width: 120px;
+    height: 160px;
+    border: 5px solid #758cd8; /* Thicker pink border */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+#photo-strip img:hover {
+    transform: scale(1.1); /* Slightly zoom on hover */
+}
+
+#camera-screen.captured #camera-feed {
+    filter: sepia(10%) saturate(200%) hue-rotate(20deg) brightness(110%);
+    /* This will add reddish tint to the camera feed*/
+}
+
+#camera-screen.captured {
+   opacity: 1; /*  Remove any transparency */
+   background-color: rgba(255, 0, 0, 0.2); /*Reddish background */
+}

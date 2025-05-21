@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harshita's Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Harshita's Photobooth</h1>  <!-- Added Photo Booth Name -->
+
+        <div id="welcome-screen">
+            <button id="welcome-button">Welcome</button>
+        </div>
+
+        <div id="camera-screen" style="display: none;">
+            <div style="position:relative; display:inline-block;"> <!-- Wrapper for camera and overlay-->
+                <video id="camera-feed" autoplay playsinline></video>
+                <div id="countdown-timer"></div>
+
+            </div>
+
+            <canvas id="canvas" style="display: none;"></canvas>
+
+            <button id="capture-button">Capture</button>
+        </div>
+
+        <div id="result-screen" style="display: none;">
+            <div id="photo-strip">
+                <img id="photo1" src="" alt="Photo 1">
+                <img id="photo2" src="" alt="Photo 2">
+                <img id="photo3" src="" alt="Photo 3">
+            </div>
+            <button id="download-button">Download</button>
+            <button id="reset-button">Take More Photos</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
